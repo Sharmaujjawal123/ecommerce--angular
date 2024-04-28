@@ -1,0 +1,18 @@
+<div (click)="navigate()" class="productCard w-[17rem]  m-3 transition-all cursor-pointer">
+<div class="">
+    <img class="h-[20rem] w-full" [src]="product.imageUrl" alt="">
+
+    <div class="textPart p-3 bg-black">
+        <div>
+            <p class="opacity-80">{{product.brand}}</p>
+            <p class="opacity-80">{{product.title}}</p>
+            <p class="text-gray-600">{{product.color}}</p>
+        </div>
+        <div class="flex flex-wrap space-x-2 item-center">
+            <p class="font-bold text-blue-600">₹{{product.discountedPrice}}</p>
+            <p class=" line-through text-red-500">₹{{product.price}}</p>
+            <p class="text-green-500">{{product.disscount}} %</p>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+
+    <form [formGroup]="signUpForm" (ngSubmit)="submitForm()">
+
+        <h1>AJJEB</h1>
+        <div>
+            
+            
+            <mat-form-field class="w-full">
+
+                <mat-label>FirstName</mat-label>
+                <input matInput formControlName="firstName" >
+
+                <mat-error *ngIf="signUpForm.controls['firstName'].hasError('required')">FirstName Is required</mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+
+                <mat-label>LastName</mat-label>
+                <input matInput formControlName="lastName" >
+
+                <mat-error *ngIf="signUpForm.controls['lastName'].hasError('required')">LastName Is required</mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" >
+
+                <mat-error *ngIf="signUpForm.controls['email'].hasError('required')">Email Is required</mat-error>
+                <mat-error *ngIf="signUpForm.controls['email'].hasError('email')">Enter a valid email</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+
+                <mat-label>password</mat-label>
+                <input matInput formControlName="password" >
+
+                <mat-error *ngIf="signUpForm.controls['password'].hasError('required')">Password Is required</mat-error>
+                <!-- <mat-error *ngIf="signUpForm.controls['password'].hasError('minLength')">Enter a valid email</mat-error> -->
+            </mat-form-field>
+
+            <div>
+
+                <button mat-raised-button class="w-full" style="padding: 1.7rem;" color="accent">REGISTER</button>
+            </div>
+
+            <div class="pt-5">
+                <span>if you have account ?</span>
+                <button mat-button color="accent" (click)="changeTamplate()">signUp</button>
+            </div>
+        </div>
+    </form>
+ 
+</div>
